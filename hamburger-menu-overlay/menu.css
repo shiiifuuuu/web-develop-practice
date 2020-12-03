@@ -1,0 +1,137 @@
+#menu-wrap{
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 2;
+}
+#menu-wrap .toggler{
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   width: 3rem;
+   height: 3rem;
+   z-index: 3;
+   cursor: pointer;
+   opacity: 0;
+}
+/* hamburger-icon background */
+#menu-wrap .hamburger-icon{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 3rem;
+   width: 3rem;
+   padding: 0.6rem;
+   background: rgba(52, 155, 196, 0.5);
+   border-radius: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0.3rem;
+   z-index: 1;
+}
+/* horizontal line */
+.hamburger-icon > div{
+   position: relative;
+   width: 100%;
+   height: 1.5px;
+   background: white;
+   /* flex: none;
+   display: flex;
+   justify-content: center;
+   align-items: center; */
+   transition-property: all;
+   transition-duration: 2s;
+}
+/* horizontal line up and down */
+.hamburger-icon > div::before,
+.hamburger-icon > div::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   top: -10px;
+   z-index: 1;
+}
+/* down */
+.hamburger-icon > div::after{
+   top: 10px;
+}
+/* checked animation cross */
+#menu-wrap .toggler:checked + .hamburger-icon > div{
+   transform: rotate(135deg);
+}
+#menu-wrap .toggler:checked + .hamburger-icon > div::before,
+#menu-wrap .toggler:checked + .hamburger-icon > div::after{
+   top: 0;
+   transform: rotate(90deg);
+}
+/* checked hover effect */
+#menu-wrap .toggler:checked:hover + .hamburger-icon > div{
+   transform: rotate(405deg);
+}
+
+#menu-wrap .menu{
+   visibility: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/* menu background */
+#menu-wrap .menu > div{
+   transform: scale(0);
+   position: absolute;
+   background: rgba(51, 51, 51, 0.9);
+   width: 150vw;
+   height: 150vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   transition-property: 'background';
+   transition-duration: 0.6s;
+   transition-timing-function: ease-in;
+
+}
+/* menu items  */
+#menu-wrap .menu > div > div{
+   opacity: 0;
+   text-align: center;
+   max-width: 60vw;
+   max-height: 70vw;
+
+   transition-property: opacity;
+   transition-duration: 1s;
+   transition-delay: 0.4s;
+}
+#menu-wrap .menu > div > div > ul li{
+   padding: 1rem;
+}
+#menu-wrap .menu > div > div > ul li > a {
+   font-size: 2rem;
+
+   transition-property: color;
+   transition-duration: 1s;
+}
+#menu-wrap .menu > div > div > ul li > a:hover{
+   color: #976f02;
+}
+#menu-wrap .toggler:checked ~ .menu{
+   visibility: visible;
+}
+#menu-wrap .toggler:checked ~ .menu > div{
+   transform: scale(1);
+}
+#menu-wrap .toggler:checked ~ .menu > div > div{
+   opacity: 1;
+}

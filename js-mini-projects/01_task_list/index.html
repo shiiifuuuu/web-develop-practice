@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task List</title>
+   <link rel="stylesheet" href="./main.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+   <section class="card">
+      <div id="add-task-form">
+         <div class="container">
+            <h1>Task List</h1>
+            <form id="task-form" action="#">
+               <input type="text" id="new-task" class='input-task' placeholder="add a daily task">
+               <input type="submit" class="btn-add-task" value="Add Task">
+            </form>
+         </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="show-task-list">
+         <div class="container">
+            <h2>My Tasks</h2>
+            <form action="#">
+               <input type="text" id="filter-task" class='input-task' placeholder="Filter Tasks">
+            </form>
+            <ul id="tasks">
+               <!-- <li class="task">
+                  task name
+                  <a href="#" class="delete-task">
+                     <i class="far fa-trash-alt"></i>
+                  </a>
+               </li> -->
+            </ul>
+            <a href="#" id="clear-task" class="btn-clear-task">
+               Clear Tasks
+            </a>
+         </div>
+      </section>
+   </section>
+
+   <script src="./main.js"></script>
+</body>
+</html>

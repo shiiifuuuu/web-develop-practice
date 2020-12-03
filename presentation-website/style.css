@@ -1,0 +1,107 @@
+/* variables */
+:root{
+   --bg-page-1: steelblue;
+   --bg-page-2: tan;
+   --bg-page-3: teal;
+   --bg-page-4: slateblue;
+}
+*{
+   margin: 0;
+   padding: 0;
+   overflow: hidden; /*hides the scrollbar*/
+}
+body{
+   line-height: 1.1;
+   color: white;
+}
+a{
+   text-decoration: none;
+}
+#page-1{
+   background: var(--bg-page-1);
+}
+#page-2{
+   background: var(--bg-page-2);
+}
+#page-3{
+   background: var(--bg-page-3);
+}
+#page-4{
+   background: var(--bg-page-4);
+}
+.page{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 100vh;
+   padding: 0 4rem;
+}
+.page h1{
+   font-size: 4rem;
+   margin: 2rem 0;
+}
+.page p{
+   font-size: 1.5rem;
+   margin: 2rem 0;
+}
+
+.btn{
+   display: inline-block;
+   padding: 1rem 3rem;
+   background: #f4f4f4;
+   color: #333;
+   font-size: 1.2rem;
+   margin: 2rem 1rem;
+   border: none;
+
+   /* hover-effects */
+   transition-property: all;
+   transition-duration: 1s;
+   transition-timing-function: ease-out;
+}
+.btn:hover{
+   background: #333;
+   color: #f4f4f4;
+
+   border-radius: 5rem;
+}
+.btn-dark{
+   background: #333;
+   color: #f4f4f4;
+}
+.btn-dark:hover{
+   background: #f4f4f4;
+   color: #333;
+
+   border-radius: 5rem;
+}
+
+/* animation */
+#page-1 h1{
+   transform: translateY(-1200px);
+   animation-name: top-heading;
+   animation-duration: 3s;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-in-out;
+}
+@keyframes top-heading{
+   to{
+      transform: translateY(0);
+   }
+}
+
+#page-1 p{
+   transform: translateX(-1000px);
+   animation-name: left-paragraph;
+   animation-duration: 2s;
+   animation-fill-mode: forwards; /*staying after animation*/
+   animation-timing-function: ease-in-out;
+   animation-delay: 3s;
+}
+@keyframes left-paragraph{
+   to{
+      transform: translateX(0);
+   }
+}

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+/* reset */
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-family: 'Roboto', sans-serif;
+   line-height: 1.4;
+}
+p{
+   margin: 0.75rem 0;
+}
+a{
+   text-decoration: none;
+}
+ul{
+   list-style: none;
+}
+input,textarea{
+   font-family: 'Roboto', sans-serif;
+}
+
+/* utility */
+.text-primary{
+   color: #93cb52;
+}
+.btn{
+   background: #93cb52;
+   color: white;
+   border: none;
+   border-radius: .25rem;
+   padding: .5rem 2rem;
+   width: fit-content;
+}
+.btn:hover{
+   background: #618635;
+   /* cursor: pointer; */
+}
+.heading-l{
+   font-size: 4rem;
+   line-height: 1.1;
+}
+.heading-m{
+   font-size: 3rem;
+   line-height: 1.1;
+}
+.p-showcase{
+   font-size: 1.5rem;
+}
+.bg-dark{
+   background: #333;
+   color: white;
+}
+.container{
+   max-width: 1100px;
+   padding: 1rem;
+   margin: auto;
+   overflow: hidden;
+}
+
+/* Nav-bar */
+#navbar{
+   background: #333;
+   color: white;
+   padding: 1rem; 
+   position: sticky;
+   top: 0;  
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   z-index: 11;
+}
+#navbar ul{
+   list-style: none;
+   display: flex;
+   
+}
+#navbar ul li a{
+   color: white;
+   padding: 0.75rem;
+   margin: 0 0.25rem;
+}
+#navbar ul li a:hover{
+   background: #93cb52;
+   border-radius: 0.25rem;
+}
+
+/* header-showcase */
+#showcase{
+   height: 100vh;
+   color: white;
+   background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+}
+.showcase-content{
+   height: 100%;
+   padding: 1rem;
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   /* overlay */
+   position: relative;
+   /* top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0; */
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   /* margin-top: 3.8rem; */
+   z-index: 1;
+}
+#showcase h1{
+   margin-bottom: 1rem;
+}
+#showcase p{
+   margin-bottom: 3rem;
+}
+
+/* what-section */
+#what{
+   background: #f8f8f8;
+   padding: 3rem 0;
+}
+#what h2{
+   text-align: center;
+   margin-bottom: 2.5rem;
+}
+#what .items{
+   text-align: center;
+   display: flex;
+}
+#what .items .item{
+   padding: 1rem;
+}
+#what .items .item i{
+   background: #93cb52;
+   padding: 0.75rem;
+   border-radius: 50%;
+   margin-bottom: 0.5rem;
+}
+
+/* who-section */
+#who{
+   background: #333;
+   color: white;
+   display: flex;
+}
+#who div{
+   flex: 1;
+}
+#who .who-img{
+   background: url('../img/people.jpg') no-repeat center center/cover;
+}
+#who .who-text{
+   padding: 2rem 1rem;
+}
+.who-text h2{
+   padding-bottom: 1rem;
+}
+.who-text p{
+   padding-bottom: .75rem;
+}
+.who-text h3{
+   padding-bottom: .60rem;
+}
+.who-text ul li{
+   border-bottom: 1px dotted #5e5e5e;
+   padding: .5rem 0;
+}
+/* span */
+.text-span-list{
+   font-weight: bold;
+   letter-spacing: .15rem;
+   color: #93cb52;
+}
+
+/* client-section */
+#client{
+   background: #f8f8f8;
+   padding: 1rem;
+}
+#client h2{
+   text-align: center;
+   padding: 1rem 0;
+}
+#client .clients{
+   margin: 2rem 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+.clients img{
+   display: block;
+   width: 100px;
+   border: 3px solid #93cb52;
+   border-radius: .5rem;
+   padding: .5rem;
+   margin: 1rem;
+}
+
+/* contact-section */
+#contact{
+   display: flex;
+}
+#contact .contact-info{
+   background: #93cb52;
+   color: white;
+
+   flex: 1.15;
+
+   padding: 1rem;
+}
+#contact .contact-info h2{
+   padding: 1rem 0;
+}
+#contact .contact-info p{
+   padding-bottom: .75rem;
+}
+.form-group{
+   padding: 0 0.5rem;
+}
+.form-group label{
+   display: block;
+}
+.form-group input, 
+.form-group textarea{
+   border: none;
+   width: 100%;
+   padding: 0.75rem;
+   font-size: 0.75rem;
+
+   margin-bottom: 1rem;
+}
+.form-group input:focus, 
+.form-group textarea:focus{
+   outline-color: #93cb52;
+}
+.form-group textarea{
+   height: 5rem;
+}
+.contact-info .btn{
+   width: 100%;
+   margin-bottom: 2rem;
+}
+#contact .contact-map{
+   flex: 2;
+}
+
+/* footer-section */
+#main-footer{
+   background: #618635;
+   color: white;
+}
+#main-footer .container{
+   padding: 0;
+   text-align: center;
+   font-size: .85rem;
+}
