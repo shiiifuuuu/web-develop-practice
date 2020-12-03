@@ -13,3 +13,7 @@ portfolio: https://inspiring-boyd-d16806.netlify.app/portfolio_frontend/
 
 presentation: https://inspiring-boyd-d16806.netlify.app/presentation_frontend/
 
+
+Javascript Mini Projects
+
+01_taskList: 
