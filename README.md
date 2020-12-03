@@ -16,4 +16,4 @@ presentation: https://inspiring-boyd-d16806.netlify.app/presentation_frontend/
 
 Javascript Mini Projects
 
-01_taskList: 
+01_taskList: https://inspiring-boyd-d16806.netlify.app/js-mini-projects/01_task_list/
