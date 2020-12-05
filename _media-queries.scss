@@ -1,0 +1,33 @@
+@media (max-width: 550px) {
+  .container {
+    margin: 0 auto;
+  }
+  #main-title {
+    margin-bottom: 1.5rem;
+    h1 {
+      font-size: 1.6rem;
+      padding: 1rem 1rem;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  #projects {
+    grid-template-columns: repeat(1, 1fr);
+    .project-grp {
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      ul {
+        li {
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
