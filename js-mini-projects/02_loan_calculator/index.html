@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Loan Calculator</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <section id="main">
+      <div class="container">
+         <div id="error-message">
+            <h4>Error!! Please Check your numbers.</h4>
+         </div>
+         <div id="loan-calculator">
+            <h1>Loan Calculator</h1>
+            <form action="#" id="input-form">
+               <div class="form-group">
+                  <div class="input-grp">
+                     <span class="icon">$</span>
+                     <input type="number" id="amount" class="user-input" placeholder="Loan Amount">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-grp">
+                     <span class="icon">%</span>
+                     <input type="number" step="any" id="interest" class="user-input" placeholder="Annual Interest">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-grp">
+                     <input type="number" id="years" class="user-input" placeholder="Repayment Years">
+                  </div>
+               </div>
+               <input type="submit" value="Calculate" class="btn-dark">
+            </form>
+         </div>
+         <div id="loading">
+            <h2>Calculating...</h2>
+            <img src="./img/loading.gif" alt="">
+         </div>
+         <div id="result">
+            <h2>Results</h2>
+            <div class="result">
+               <h4 class="grp">Monthly Payment</h4>
+               <p id="monthly-payment" class="grp">425.40</p>
+            </div>
+            <div class="result">
+               <h4 class="grp">Total Payment</h4>
+               <p id="total-payment" class="grp">425.40</p>
+            </div>
+            <div class="result">
+               <h4 class="grp">Total Interest</h4>
+               <p id="total-interest" class="grp">425.40</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script src="main.js"></script>
+</body>
+</html>
