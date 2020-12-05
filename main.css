@@ -9,6 +9,8 @@
 
 body {
   font-family: "Trispace", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 li {
@@ -96,10 +98,16 @@ a {
 #projects .projec-grp ul li a {
   font-size: 1.5rem;
   color: #333;
+  padding: 0 0.5rem;
 }
 
 #projects .projec-grp ul li a:visited {
   color: #fff;
+}
+
+#projects .projec-grp ul li a:hover {
+  font-size: 1.6rem;
+  background: #33333310;
 }
 
 #projects .projec-grp ul li:last-child {

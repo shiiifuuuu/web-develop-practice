@@ -7,6 +7,8 @@
 }
 body {
   font-family: "Trispace", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 li {
   list-style: none;
@@ -71,8 +73,13 @@ a {
         a {
           font-size: 1.5rem;
           color: #333;
+          padding: 0 0.5rem;
           &:visited {
             color: #fff;
+          }
+          &:hover {
+            font-size: 1.6rem;
+            background: #33333310;
           }
         }
         &:last-child {
