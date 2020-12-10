@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root{
+   --header-color: #0075F7;
+   --box-color: #0075F7;
+   --timeline-color: #152B7E;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'Roboto Mono', monospace;
+   color: white;
+   overflow-x: hidden;
+}
+li{
+   list-style:none;
+}
+#main-header{
+   background: var(--header-color);
+}
+#main-header .container{
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 4rem 0;
+   text-align: center;
+}
+#main-header h1{
+   font-size: 350%;
+   text-align: center;
+}
+
+#timeline{
+   background: var(--timeline-color);
+   padding-bottom: 6rem;
+}
+#timeline ul{
+   padding-top: 3rem;
+}
+/* white line in middle */
+#timeline ul li{
+   position: relative;
+   width: 6px;
+   background: white;
+   margin: 0 auto;
+   padding-top: 4.5rem;
+}
+/* middle dots */
+#timeline ul li::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   width: 25px;
+   height: 25px;
+   transform: translateX(-9.5px);
+   border-radius: 50%;
+   /* initial value */
+   background: inherit;
+   opacity: 0;
+
+   transition-property: background;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+}
+/* box */
+#timeline ul li div{
+   /* initial value */
+   visibility: hidden;
+   opacity: 0;
+
+   width: 400px;
+   position: relative;
+   bottom: 0;
+   padding: 1rem;
+   background: var(--box-color);
+
+   transition-property: all;
+   transition-duration: 1s;
+   transition-delay: 0.5s;
+   transition-timing-function: ease-in-out;
+}
+/* left-box */
+#timeline ul li:nth-child(even) > div{
+   left: -435px;
+   /* initial value */
+   transform: translateX(-300px);
+}
+/* right-box */
+#timeline ul li:nth-child(odd) > div{
+   left: 40px;
+   /* initial value */
+   transform: translateX(300px);
+}
+/* arrow-base */
+#timeline div::before{
+   content: '';
+   position: absolute;
+   bottom: 4px;
+   width: 0;
+   height: 0;
+   border-style: solid;
+}
+/* right-side arrow */
+#timeline ul li:nth-child(odd) > div:before{
+   left: -15px;
+   border-width: 8px 16px 8px 0;
+   border-color: transparent var(--box-color) transparent transparent;
+}
+/* left-side arrow */
+#timeline ul li:nth-child(even) > div:before{
+   left: 400px;
+   border-width: 8px 0 8px 16px;
+   border-color: transparent transparent transparent var(--box-color);
+}
+
+                                             /* Animation */
+/* middle dots */
+#timeline ul li.show::after{
+   /* initial value */
+   background: var(--box-color);
+   opacity: 1;
+}
+#timeline ul li.show div{
+   visibility: visible;
+   opacity: 1;
+   transform: none;
+}
+                                            
+
+
+                                             /* MEDIA QUERY */
+@media (max-width:900px){
+   #main-header .container{
+      padding: 2rem 0;
+   }
+   #main-header h1{
+      display: flex;
+      flex-direction: column;
+      font-size: 250%;
+   }
+
+   #timeline{
+      font-size: 80%;
+   }
+
+   #timeline ul li{
+      padding-top: 2rem;
+   }
+   /* box */
+   #timeline ul li div{
+      width: 330px;
+   }
+   /* left-box */
+   #timeline ul li:nth-child(even) > div{
+      left: -365px;
+   }
+   /* left-side arrow */
+   #timeline ul li:nth-child(even) > div:before{
+      left: 330px;
+   }
+}
+@media (max-width:760px){
+   #timeline ul li{
+      padding-top: 2rem;
+   }
+   /* box */
+   #timeline ul li div{
+      width: 250px;
+   }
+   /* left-box */
+   #timeline ul li:nth-child(even) > div{
+      left: -285px;
+   }
+   /* left-side arrow */
+   #timeline ul li:nth-child(even) > div:before{
+      left: 250px;
+   }
+}
+@media (max-width:600px){
+   /* white line in left */
+   #timeline ul li{
+      margin: 0;
+      padding-top: 2rem;
+   }
+   #timeline ul{
+      padding-left: 1rem;
+   }
+   /* left-box */
+   #timeline ul li:nth-child(even) > div{
+      left: 40px;
+   }
+   /* box */
+   #timeline ul li div{
+      width: calc(100vw - 90px);
+   }
+   /* left-side arrow */
+   #timeline ul li:nth-child(even) > div:before{
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent var(--box-color) transparent transparent;
+   }
+   #main-header h1{
+      font-size: 200%;
+   }
+}
