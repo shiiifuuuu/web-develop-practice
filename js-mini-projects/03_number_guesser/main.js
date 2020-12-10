@@ -1,6 +1,6 @@
 const _userInput = document.getElementById('user-input');
 const _appForm = document.getElementById('app-form');
-const _btn = document.querySelector('#app-form .btn-form');
+const _btnSubmit = document.querySelector('#app-form .btn-form');
 const _min = document.getElementById('min');
 const _max = document.getElementById('max');
 const _message = document.getElementById('message');
@@ -37,19 +37,21 @@ function guessNumber(e){
       setTimeout(messageHide,4000);
    }
    else if(value === winNumber){
-      setMessage(`${_userInput.value} is correct! YOU WIN`, 'green');
-
-      _userInput.disabled='true';
-
+      disableAll();
       _again.style.display='inline';
+
+      setMessage(`${_userInput.value} is correct! YOU WIN`, 'green');      
    }else{
       lives--;
       if(lives>0){
          setMessage(`${_userInput.value} is wrong. You have ${lives} lives left.`, 'red');
       }else{
-         setMessage(`Game Over. You Lost! The Correct Number was ${winNumber}`, 'red');
-         _btn.disabled=true;
-         _userInput.disabled=true;
+         setMessage(`
+         Game Over. You Lost! 
+         The Correct Number was ${winNumber}`, 'red');
+
+         disableAll();
+
          _again.style.display='inline';
       }
    }
@@ -58,6 +60,13 @@ function setMessage(message,color){
    _message.textContent=message;
    _message.style.color=color;
    _userInput.style.borderColor=color;
+}
+function disableAll(){
+   _userInput.disabled=true;
+   _btnSubmit.disabled=true;
+   _btnSubmit.style.cursor='default';
+   _btnSubmit.style.backgroundColor='gray';
+   _userInput.style.borderColor='gray';
 }
 function messageHide(){
    _message.style.display='none';
