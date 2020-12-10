@@ -8,6 +8,14 @@ body {
   font-family: "Andika New Basic", sans-serif;
 }
 
+input {
+  font-family: "Andika New Basic", sans-serif;
+}
+
+pre {
+  font-family: "Andika New Basic", sans-serif;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -31,20 +39,20 @@ a {
   display: inline-block;
   padding: 0.5rem 3rem;
   border: none;
+  outline: none;
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 5px;
+  color: white;
 }
 
 .btn-form {
-  outline: none;
   background: #00ccff;
-  color: white;
 }
 
 .btn-replay {
   background: #5b39f3;
-  color: white;
+  font-size: 1rem;
 }
 
 #app {
@@ -73,12 +81,7 @@ a {
 }
 
 #app #message {
+  display: none;
   margin-top: 2rem;
-  display: none;
-}
-
-#app .btn-replay {
-  text-transform: capitalize;
-  display: none;
 }
 /*# sourceMappingURL=main.css.map */

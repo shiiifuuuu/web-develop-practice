@@ -5,6 +5,12 @@
 body {
   font-family: "Andika New Basic", sans-serif;
 }
+input {
+  font-family: "Andika New Basic", sans-serif;
+}
+pre {
+  font-family: "Andika New Basic", sans-serif;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -24,21 +30,21 @@ a {
   display: inline-block;
   padding: 0.5rem 3rem;
   border: none;
+  outline: none;
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 5px;
+  color: white;
 }
 .btn {
   &-form {
     @extend %btn-shared;
-    outline: none;
     background: #00ccff;
-    color: white;
   }
   &-replay {
     @extend %btn-shared;
     background: #5b39f3;
-    color: white;
+    font-size: 1rem;
   }
 }
 #app {
@@ -66,11 +72,7 @@ a {
     }
   }
   #message {
+    display: none;
     margin-top: 2rem;
-    display: none;
-  }
-  .btn-replay {
-    text-transform: capitalize;
-    display: none;
   }
 }

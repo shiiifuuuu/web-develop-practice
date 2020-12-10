@@ -4,7 +4,7 @@ const _btnSubmit = document.querySelector('#app-form .btn-form');
 const _min = document.getElementById('min');
 const _max = document.getElementById('max');
 const _message = document.getElementById('message');
-const _again = document.getElementById('again');
+// const _again = document.getElementById('again');
 
 let min=1, 
    max=10, 
@@ -24,8 +24,12 @@ winNumber=randomWinNumber();
 
 _appForm.addEventListener('submit', guessNumber);
 function guessNumber(e){
-   e.preventDefault();
-   _message.style.display='block';
+   // console.log(e.target.children[2].className);
+   //window reload
+   if(e.target.children[2].className === 'btn-replay'){
+      window.location.reload();
+   }
+
    let value = parseInt(_userInput.value);
    if(isNaN(value)){
       setMessage('Input your Number..', '#333');
@@ -38,43 +42,36 @@ function guessNumber(e){
    }
    else if(value === winNumber){
       disableAll();
-      _again.style.display='inline';
 
-      setMessage(`${_userInput.value} is correct! YOU WIN`, 'green');      
+      setMessage(`${value} is correct!\nYOU WIN`, 'green');      
    }else{
       lives--;
       if(lives>0){
-         setMessage(`${_userInput.value} is wrong. You have ${lives} lives left.`, 'red');
+         setMessage(`${value} is wrong. You have ${lives} lives left.`, 'red');
       }else{
-         setMessage(`
-         Game Over. You Lost! 
-         The Correct Number was ${winNumber}`, 'red');
+         setMessage(`Game Over. You Lost!\nThe Correct Number was ${winNumber}`, 'red');
 
          disableAll();
-
-         _again.style.display='inline';
-      }
+      }      
    }
+   e.preventDefault();
 }
 function setMessage(message,color){
+   _message.style.display='block';
    _message.textContent=message;
    _message.style.color=color;
    _userInput.style.borderColor=color;
 }
 function disableAll(){
    _userInput.disabled=true;
-   _btnSubmit.disabled=true;
-   _btnSubmit.style.cursor='default';
-   _btnSubmit.style.backgroundColor='gray';
    _userInput.style.borderColor='gray';
+
+   _btnSubmit.className = 'btn-replay';
+   _btnSubmit.value = 'Play Again';
 }
 function messageHide(){
    _message.style.display='none';
 }
-//Window reload
-_again.addEventListener('click', function(e){
-   window.location.reload();
-})
 
 //Select all from input when clicked
 _userInput.addEventListener('click', function(e){
