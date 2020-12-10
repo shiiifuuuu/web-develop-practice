@@ -4,7 +4,7 @@ const _btnSubmit = document.querySelector('#app-form .btn-form');
 const _min = document.getElementById('min');
 const _max = document.getElementById('max');
 const _message = document.getElementById('message');
-// const _again = document.getElementById('again');
+const _container = document.querySelector('.container');
 
 let min=1, 
    max=10, 
@@ -43,15 +43,17 @@ function guessNumber(e){
    else if(value === winNumber){
       disableAll();
 
-      setMessage(`${value} is correct!\nYOU WIN`, 'green');      
+      setMessage(`${value} is correct!\nYOU WIN`, 'green');    
+      
+      disableAll('lightgreen');
    }else{
       lives--;
       if(lives>0){
          setMessage(`${value} is wrong. You have ${lives} lives left.`, 'red');
       }else{
          setMessage(`Game Over. You Lost!\nThe Correct Number was ${winNumber}`, 'red');
-
-         disableAll();
+         
+         disableAll('lightcoral');
       }      
    }
    e.preventDefault();
@@ -62,9 +64,11 @@ function setMessage(message,color){
    _message.style.color=color;
    _userInput.style.borderColor=color;
 }
-function disableAll(){
+function disableAll(color){
    _userInput.disabled=true;
-   _userInput.style.borderColor='gray';
+   _userInput.style.borderColor=color;
+   _userInput.style.backgroundColor=color;
+   _container.style.boxShadow = `0px 5px 10px ${color}`;
 
    _btnSubmit.className = 'btn-replay';
    _btnSubmit.value = 'Play Again';
