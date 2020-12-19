@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Book List</title>
+   <link rel="stylesheet" href="main.css">
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container">
+      <h1>Book List</h1>
+      <div class="underline-heading"></div>
+      <div id="add-book">
+         <form action="#">
+            <div class="form-group">
+               <label for="title">Title</label>
+               <input type="text" id="title">
+            </div>
+            <div class="form-group">
+               <label for="author">Author</label>
+               <input type="text" id="author">
+            </div>
+            <div class="form-group">
+               <label for="isbn">ISBN#</label>
+               <input type="text" id="isbn">
+            </div>
+            <input type="submit" value="Add Book" class="btn-submit">
+         </form>
+         <div class="confirmation">
+            <h5 id="alert">confirmation message!</h5>
+         </div>
+      </div>
+      <div class="underline-addbook"></div>
+      <div id="list">
+         <table id="book-list">
+            <thead>
+               <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>ISBN</th>
+                  <th class="delete"></th>
+               </tr>
+            </thead>
+            <tbody>
+               <!-- <tr>
+                  <td>HTML CSS</td>
+                  <td>publications</td>
+                  <td>4222657122-5442</td>
+                  <td><a class="delete"><i class="fas fa-times"></i></a></td>
+               </tr> -->
+            </tbody>
+         </table>
+      </div>
+   </div>
+
+   <script src="appes6.js"></script>
+</body>
+</html>
