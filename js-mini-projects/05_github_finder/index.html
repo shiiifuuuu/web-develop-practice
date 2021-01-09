@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Github Finder</title>
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+   <header>
+      <div class="container">
+         <label>GitHub Finder</label>
+      </div>
+   </header>
+   <div class="container">
+      <section id="search">
+         <h1>Search Github Users</h1>
+         <form action="get">
+            <label for='user-name'>Enter a username to fetch a users profile info and repos</label>
+            <input type="text" id="user-name" placeholder="Github Username...">
+         </form>
+         <div class="show-error">
+            <!-- <p class="error-message">User Not Found</p> -->
+         </div>
+      </section>
+      <section id="profile">
+         <div id="profile-image">
+            <img src="./img/download.png" alt="profile picture">
+            <a href="" class="btn-profile">View Profile</a>
+         </div>
+         <div id="profile-details">
+            <ul id="top">
+               <li>Public Repos:${}</li>
+               <li>Public Gists:${}</li>
+               <li>Followers:${}</li>
+               <li>Following:${}</li>
+            </ul>
+            <ul id="row">
+               <li>Company: ${}</li>
+               <li>Website/blog: ${}</li>
+               <li>Location: ${}</li>
+               <li>Member Since: ${}</li>
+            </ul>
+         </div>
+      </section>
+      <section id="latest-repos">
+         <h2>Latest Repos</h2>
+         <ul id="repos">
+            <li class="repo-list">
+               <a href="${}">${}</a>
+               <div>
+                  <ul>
+                     <li>Stars: ${}</li>
+                     <li>Watchers: ${}</li>
+                     <li>Forks: ${}</li>
+                  </ul>
+               </div>
+            </li>
+         </ul>
+      </section>
+   </div>
+   <footer>
+      <label>GitHub Finder &copy;</label>
+   </footer>
+
+   <script src="./js/github.js"></script>
+   <script src="./js/ui.js"></script>
+   <script src="./js/app.js"></script>
+</body>
+</html>

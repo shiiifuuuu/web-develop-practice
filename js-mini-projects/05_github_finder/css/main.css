@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #ebebeb;
+  outline-color: #ebebeb;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  background: #2575ec;
+  padding: 0.6rem 0;
+}
+
+header label {
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+#search, #profile {
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+}
+
+#search h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#search form {
+  margin-bottom: 0.5rem;
+}
+
+#search form label[for="user-name"] {
+  color: #a5a5a5;
+  font-size: 1rem;
+}
+
+#search form #user-name {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#search .error-message {
+  background: #dd2d2d;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-profile {
+  display: block;
+  padding: 0.7rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.btn-profile {
+  background: #2575ec;
+}
+
+#profile-details #top li:nth-child(1), #profile-details #top li:nth-child(2), #profile-details #top li:nth-child(3), #profile-details #top li:nth-child(4), #latest-repos #repos .repo-list ul li:nth-child(1), #latest-repos #repos .repo-list ul li:nth-child(2), #latest-repos #repos .repo-list ul li:nth-child(3) {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+#profile {
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#profile-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2rem;
+}
+
+#profile-image img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0.5rem;
+}
+
+#profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#profile-details #top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+#profile-details #top li {
+  margin-right: 0.5rem;
+}
+
+#profile-details #top li:nth-child(1) {
+  background: #2f55ff;
+}
+
+#profile-details #top li:nth-child(2) {
+  background: #c9c9c9;
+}
+
+#profile-details #top li:nth-child(3) {
+  background: #1d860f;
+}
+
+#profile-details #top li:nth-child(4) {
+  background: #2c99cc;
+}
+
+#profile-details #row {
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+}
+
+#profile-details #row li {
+  border-bottom: 2px solid #ebebeb;
+  padding: 0.5rem;
+}
+
+#profile-details #row li:last-child {
+  border-bottom: none;
+}
+
+#latest-repos {
+  display: none;
+  overflow: hidden;
+}
+
+#latest-repos h2 {
+  margin-bottom: 0.5rem;
+}
+
+#latest-repos #repos .repo-list {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ebebeb;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#latest-repos #repos .repo-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#latest-repos #repos .repo-list ul li {
+  margin-right: 0.8rem;
+}
+
+#latest-repos #repos .repo-list ul li:nth-child(1) {
+  background: #1d860f;
+}
+
+#latest-repos #repos .repo-list ul li:nth-child(2) {
+  background: #2f55ff;
+}
+
+#latest-repos #repos .repo-list ul li:nth-child(3) {
+  background: #e09f12;
+}
+
+footer {
+  text-align: center;
+  padding: 0.6rem 0;
+  border: 2px solid #ebebeb;
+  margin-top: 3rem;
+}
+
+@media (max-width: 550px) {
+  header {
+    text-align: center;
+  }
+  #profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #profile-image {
+    margin-bottom: 1rem;
+    margin-right: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #profile-image a {
+    width: 100%;
+  }
+  #profile-details #top {
+    margin-bottom: 1rem;
+  }
+  #profile-details #top li {
+    margin-right: 0.2rem;
+  }
+  #profile-details #row {
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+  }
+  #profile-details #row li {
+    border-bottom: 2px solid #ebebeb;
+    padding: 0.5rem;
+  }
+  #profile-details #row li:last-child {
+    border-bottom: none;
+  }
+  #latest-repos h2 {
+    padding-left: 1rem;
+  }
+  #latest-repos #repos .repo-list {
+    margin-bottom: 0.3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #latest-repos #repos .repo-list ul li {
+    margin-right: 0.3rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
