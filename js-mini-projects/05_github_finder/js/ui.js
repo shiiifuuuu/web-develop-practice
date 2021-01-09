@@ -37,7 +37,7 @@ class UI{
    }
 
    showRepos(repos){
-      if(profile.message !== 'Not Found'){
+      if(repos.message !== 'Not Found'){
          this.showError.style.display = 'none';
          this.latestRepos.style.display = 'block';
          let output = '';
@@ -58,7 +58,6 @@ class UI{
          this.repos.innerHTML = output;
       }else{
          this.clearProfile();
-         this.alert(profile.message);
       }
    }
 
@@ -72,5 +71,6 @@ class UI{
       this.showError.style.display = 'none';
       this.profile.style.display = 'none';
       this.profile.innerHTML = '';
+      this.latestRepos.style.display = 'none';
    }
 }
