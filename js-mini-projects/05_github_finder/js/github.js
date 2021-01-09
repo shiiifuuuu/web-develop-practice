@@ -17,4 +17,11 @@ class Github{
          repos: repos
       };
    }
+
+   //testing rate limit exceed
+   async rateLimit(){
+      let apiRateLimit = await fetch(`https://api.github.com/rate_limit?client_id=${this.client_id}&client_secret=${this.client_secret}`);
+
+      return await apiRateLimit.json();
+   }
 }

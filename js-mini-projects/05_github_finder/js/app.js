@@ -8,10 +8,12 @@ search.addEventListener('keyup', e => {
       github.getUser(input).then(user => {
          ui.showProfile(user.profile);
          ui.showRepos(user.repos);
-         // console.log(user.repos);
       });
    }else{
       //type a name in inputbox
       ui.clearProfile();
    }
 });
+
+github.rateLimit().then(data=>console.log('Search limit remaining: '+data.rate.remaining));
+github.rateLimit().then(data=>console.log(data));
