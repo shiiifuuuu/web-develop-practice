@@ -10,7 +10,6 @@ search.addEventListener('keyup', e => {
          ui.showRepos(user.repos);
       });
    }else{
-      //type a name in inputbox
       ui.clearProfile();
    }
 });

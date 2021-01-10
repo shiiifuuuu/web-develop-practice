@@ -1,8 +1,7 @@
 class UI{
    constructor(){
       this.profile = document.getElementById('profile');
-      this.latestRepos = document.getElementById('latest-repos');
-      this.repos = document.getElementById('repos');
+      this.repos = document.getElementById('latest-repos');
       this.showError = document.querySelector('#search .show-error');
    }
 
@@ -37,9 +36,18 @@ class UI{
    }
 
    showRepos(repos){
+      this.repos.innerHTML = '';
+      
       if(repos.message !== 'Not Found'){
+
+         let h2 = document.createElement('h2');
+         h2.textContent = 'Latest Repos';
+   
+         let ul = document.createElement('ul');
+         ul.id = 'repos';
+
          this.showError.style.display = 'none';
-         this.latestRepos.style.display = 'block';
+         
          let output = '';
          repos.forEach((repo)=>{
             output += `
@@ -55,9 +63,14 @@ class UI{
                </li>
             `;
          });
-         this.repos.innerHTML = output;
+         
+         ul.innerHTML = output;
+         
+         this.repos.appendChild(h2);
+         this.repos.appendChild(ul);
       }else{
          this.clearProfile();
+         this.alert(profile.message);
       }
    }
 
@@ -71,6 +84,6 @@ class UI{
       this.showError.style.display = 'none';
       this.profile.style.display = 'none';
       this.profile.innerHTML = '';
-      this.latestRepos.style.display = 'none';
+      this.repos.innerHTML = '';
    }
 }
