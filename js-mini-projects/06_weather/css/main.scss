@@ -110,7 +110,7 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
 
   background: #f5f5dc;
   padding: 2rem;
@@ -150,6 +150,7 @@ img{
   }
   .btn-location{
     flex: 1;
+    height: fit-content;
     padding: 0.5rem 1rem;
     background: #058a0c;
     border-radius: 10px;

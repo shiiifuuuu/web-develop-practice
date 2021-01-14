@@ -189,9 +189,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #f5f5dc;
   padding: 2rem;
   visibility: 0;
@@ -249,6 +246,9 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 0.5rem 1rem;
   background: #058a0c;
   border-radius: 10px;

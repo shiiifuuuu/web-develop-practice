@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 //Weather in your location
 myLocation.addEventListener('mouseup', (e) => {
+
    weather.getCurrentLoc().then(data => {
       weather.getWeatherFromLatLon(data.latitude, data.longitude).then(data => {
          localStorage.setItem('city', data.name);
@@ -54,17 +55,18 @@ submit.addEventListener('click', (e) => {
             //error message
             userInput.style.boxShadow = '0 2px 10px #ff0505, 0 -2px 10px #ff0505';
          } else {
+            clearEvents();
+
             localStorage.setItem('city', data.name);
             ui.printWeather(data);
-
-            clearEvents();
          }
       }).catch(err => console.log(err))
    }
-
-   console.log(city);
 });
 
+userInput.addEventListener('focus', (e) => {
+   userInput.style.boxShadow = '';
+});
 
 searchBar.addEventListener('click', (e) => {
    searchSection.classList.toggle('active', true);
@@ -73,7 +75,7 @@ searchBar.addEventListener('click', (e) => {
 
 close.addEventListener('click', (e) => {
    clearEvents();
-})
+});
 
 function clearEvents() {
    searchSection.classList.toggle('active', false);
