@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Yusei Magic', sans-serif;
 }
 .container {
   max-width: 550px;
@@ -57,9 +59,10 @@ img{
   background: #5679d8;
   color: #FFF;
   text-align: center;
+  padding: 0 1rem 2rem 1rem;
   #grp-1{
     li{
-      &:nth-child(1){font-size: 4rem;}
+      &:nth-child(1){font-size: 6rem;}
       &:nth-child(2){font-size: 1.5rem;}
       &:nth-child(3){
         font-size: 3rem;
@@ -77,6 +80,9 @@ img{
   #grp-2,#grp-3,#grp-4{
     li{font-size: 1.3rem;}
   }
+}
+#blur{
+  transition: all 0.5s 0.1s;
 }
 #blur.active{
   filter: blur(10px);
@@ -103,10 +109,11 @@ img{
   margin: 10px;
   &:hover{
     cursor: pointer;
+    
   }
 }
 #search{
-  width: 500px;
+  width: 540px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -124,7 +131,7 @@ img{
     flex-direction: column;
     flex: 2;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     margin-right: 1rem;
     #city-name{
       // box-shadow: 0 2px 10px #ff0505, 0 -2px 10px #ff0505;
@@ -139,7 +146,7 @@ img{
     #location-submit{
       width: fit-content;
       padding: 0.5rem 1rem;
-      border-radius: 10px;
+      border-radius: 5px;
       border: none;
       outline: none;
       background: #ffd341;
@@ -150,7 +157,10 @@ img{
   }
   .btn-location{
     flex: 1;
-    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: fit-content;
     padding: 0.5rem 1rem;
     background: #058a0c;
     border-radius: 10px;
@@ -162,7 +172,7 @@ img{
 }
 
 //Media Queries
-@media(max-width: 550px){
+@media(max-width: 570px){
   .container{
     padding: 0 1rem;
   }

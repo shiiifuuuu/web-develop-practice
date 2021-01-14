@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .container {
@@ -105,10 +107,11 @@ img {
   background: #5679d8;
   color: #FFF;
   text-align: center;
+  padding: 0 1rem 2rem 1rem;
 }
 
 #display-weather #grp-1 li:nth-child(1) {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 #display-weather #grp-1 li:nth-child(2) {
@@ -139,6 +142,11 @@ img {
 
 #display-weather #grp-2 li, #display-weather #grp-3 li, #display-weather #grp-4 li {
   font-size: 1.3rem;
+}
+
+#blur {
+  -webkit-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
 }
 
 #blur.active {
@@ -178,7 +186,7 @@ img {
 }
 
 #search {
-  width: 500px;
+  width: 540px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,9 +219,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-right: 1rem;
 }
 
@@ -232,7 +237,7 @@ img {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   outline: none;
   background: #ffd341;
@@ -246,9 +251,15 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.5rem 1rem;
   background: #058a0c;
   border-radius: 10px;
@@ -258,7 +269,7 @@ img {
   font-size: 1.5rem;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
   .container {
     padding: 0 1rem;
   }

@@ -2,8 +2,8 @@ class WeatherAPI {
    //openweathermap.org/api
    constructor() {
       //initial location
-      this.lat = 23.676;
-      this.lon = 90.457;
+      this.lat = 23.6763;
+      this.lon = 90.4573;
 
       this.apiKey = 'e18e2c253f6e33bd87f605b802c0f703';
    }
