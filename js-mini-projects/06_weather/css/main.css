@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.card {
+  -webkit-box-shadow: 0 3px 10px #333;
+          box-shadow: 0 3px 10px #333;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.pdng-1 {
+  padding: 1rem;
+}
+
+.pdng-2 {
+  padding: 2rem;
+}
+
+.pdng-h-1 {
+  padding: 0 1rem;
+}
+
+.pdng-h-2 {
+  padding: 0 2rem;
+}
+
+.pdng-v-1 {
+  padding: 1rem 0;
+}
+
+.pdng-v-2 {
+  padding: 2rem 0;
+}
+
+.mrgn-1 {
+  margin: 1rem;
+}
+
+.mrgn-2 {
+  margin: 2rem;
+}
+
+.mrgn-h-1 {
+  margin: 0 1rem;
+}
+
+.mrgn-h-2 {
+  margin: 0 2rem;
+}
+
+.mrgn-v-1 {
+  margin: 1rem 0;
+}
+
+.mrgn-v-2 {
+  margin: 2rem 0;
+}
+
+.mrgn-b-1 {
+  margin-bottom: 1rem;
+}
+
+.mrgn-b-2 {
+  margin-bottom: 2rem;
+}
+
+#search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+#search-bar #search-icon {
+  width: 50px;
+  height: 50px;
+}
+
+#search-bar:hover {
+  cursor: text;
+}
+
+#display-weather {
+  background: #5679d8;
+  color: #FFF;
+  text-align: center;
+}
+
+#display-weather #grp-1 li:nth-child(1) {
+  font-size: 4rem;
+}
+
+#display-weather #grp-1 li:nth-child(2) {
+  font-size: 1.5rem;
+}
+
+#display-weather #grp-1 li:nth-child(3) {
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#display-weather #grp-1 li:nth-child(3) img {
+  width: 100px;
+  height: 100px;
+}
+
+#display-weather #grp-1 li:nth-child(4) {
+  font-size: 2rem;
+}
+
+#display-weather #grp-2 li, #display-weather #grp-3 li, #display-weather #grp-4 li {
+  font-size: 1.3rem;
+}
+
+#blur.active {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#search.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 1s 0.2s;
+  transition: all 1s 0.2s;
+}
+
+#search.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  z-index: 2;
+}
+
+.close-window {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.close-window:hover {
+  cursor: pointer;
+}
+
+#search {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f5dc;
+  padding: 2rem;
+  visibility: 0;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+#search form #city-name {
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#search form #location-submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #ffd341;
+}
+
+#search form #location-submit:hover {
+  cursor: pointer;
+}
+
+#search .btn-location {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5rem 1rem;
+  background: #058a0c;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0 1rem;
+  }
+  #search {
+    width: 95%;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

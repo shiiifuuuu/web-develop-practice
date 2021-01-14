@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Location Weather</title>
+
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+   <div id="search" class="card popup">
+      <img id="close" class="close-window" src="./css/img/close-window.svg" alt="Close">
+      <form>
+         <input type="text" id="city-name" placeholder="Type a City Name..">
+         <input type="submit" id="location-submit" value="Submit">
+      </form>
+      <a id="my-location" class="btn-location" href="#">My Location</a>
+   </div>
+   <div id="blur" class="">
+      <div class="container">
+         <section id="search-bar">
+            <img id="search-icon" src="./css/img/search-solid.svg" alt="Search Location">
+            <label>Search Location</label>
+         </section>
+      </div>
+      <div class="container">
+         <section id="display-weather" class="pdng-v-2 card">
+         </section>
+      </div>
+   </div>
+   <script src="./js/weatherApi.js"></script>
+   <script src="./js/ui.js"></script>
+   <script src="./js/main.js"></script>
+</body>
+
+</html>
