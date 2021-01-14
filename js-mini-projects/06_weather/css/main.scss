@@ -162,12 +162,18 @@ img{
     justify-content: center;
     // height: fit-content;
     padding: 0.5rem 1rem;
-    background: #058a0c;
+    background: #2a5e2d;
     border-radius: 10px;
     color: white;
     text-decoration: none;
     text-align: center;
     font-size: 1.5rem;
+    box-shadow: 0 4px 5px #19058ae8, 0 -4px 5px #8a5505e8;
+    transition: all 0.4s;
+    &:hover{
+      transform: scale(1.05, 1.05);
+      transition: all 0.4s;
+    }
   }
 }
 

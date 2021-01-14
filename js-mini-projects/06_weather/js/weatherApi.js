@@ -22,17 +22,17 @@ class WeatherAPI {
    }
 
    async getWeather() {
-      let weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.apiKey}&&units=metric`);
+      let weather = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.apiKey}&&units=metric`);
 
       return await weather.json();
    }
    async getWeatherFromCity(city) {
-      let weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&&units=metric`);
+      let weather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&&units=metric`);
 
       return await weather.json();
    }
    async getWeatherFromLatLon(lat, lon) {
-      let weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&&units=metric`);
+      let weather = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&&units=metric`);
 
       return await weather.json();
    }

@@ -30,22 +30,27 @@ class UI {
       `;
    }
 
-   setBoxShadow() {
+   setErrorEvent() {
       userInput.style.boxShadow = '0 2px 10px #ff0505, 0 -2px 10px #ff0505';
+      searchSection.style.boxShadow = '0 2px 10px #ff0505, 0 -2px 10px #ff0505';
    }
    toggleClass() {
       searchSection.classList.toggle('active', true);
       blur.classList.toggle('active', true);
    }
-
+   focusInput() {
+      userInput.focus();
+   }
    clearEvents() {
       searchSection.classList.toggle('active', false);
       blur.classList.toggle('active', false);
       userInput.value = '';
       userInput.style.boxShadow = '';
+      searchSection.style.boxShadow = '';
    }
    boxShadowRemove() {
       userInput.style.boxShadow = '';
+      searchSection.style.boxShadow = '';
    }
 }
 

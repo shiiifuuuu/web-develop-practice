@@ -261,12 +261,23 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.5rem 1rem;
-  background: #058a0c;
+  background: #2a5e2d;
   border-radius: 10px;
   color: white;
   text-decoration: none;
   text-align: center;
   font-size: 1.5rem;
+  -webkit-box-shadow: 0 4px 5px #19058ae8, 0 -4px 5px #8a5505e8;
+          box-shadow: 0 4px 5px #19058ae8, 0 -4px 5px #8a5505e8;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#search .btn-location:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 @media (max-width: 570px) {

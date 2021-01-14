@@ -45,12 +45,12 @@ submit.addEventListener('click', (e) => {
    let city = userInput.value;
    if (city === '') {
       //error message
-      ui.setBoxShadow();
+      ui.setErrorEvent();
    } else {
       weather.getWeatherFromCity(city).then(data => {
          if (data.cod === '404') {
             //error message
-            ui.setBoxShadow();
+            ui.setErrorEvent();
          } else {
             ui.clearEvents();
             localStorage.setItem('city', data.name);
@@ -64,7 +64,10 @@ submit.addEventListener('click', (e) => {
 userInput.addEventListener('focus', ui.boxShadowRemove);
 userInput.addEventListener('keydown', ui.boxShadowRemove)
 
-searchBar.addEventListener('click', ui.toggleClass);
+searchBar.addEventListener('click', () => {
+   ui.toggleClass();
+   ui.focusInput();
+});
 
 close.addEventListener('click', ui.clearEvents);
 
